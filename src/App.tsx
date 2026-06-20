@@ -1,10 +1,15 @@
-import { useState } from "react";
-
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Programs from "./pages/Programs";
+import Layout from "./components/layout";
 function App() {
   return (
-    <>
-      <h1 className="text-2xl">Hola como estas</h1>
-    </>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/programs" element={<Programs />} />
+      </Routes>
+    </Layout>
   );
 }
 
