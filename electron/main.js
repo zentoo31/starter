@@ -1,14 +1,35 @@
 import { app, BrowserWindow } from "electron";
+import "./ipc/system.js";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import fs from "node:fs";
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+
+const preloadPath = path.join(__dirname, "preload.cjs");
+console.log(fs.existsSync(preloadPath));
+
+console.log(preloadPath);
+console.log("Main iniciado");
 function createWindow() {
   const win = new BrowserWindow({
     width: 1200,
     height: 800,
+    webPreferences: {
+    preload: preloadPath,
+    contextIsolation: true,
+    nodeIntegration: false,
+  },
   });
 
   win.loadURL("http://localhost:5173");
+  console.log("ventana")
 }
 
 app.whenReady().then(() => {
   createWindow();
+  console.log("electron iniciado")
 });
+
