@@ -1,5 +1,7 @@
 import { app, BrowserWindow } from "electron";
 import "./ipc/system.js";
+import "./ipc/winget.js";
+import "./ipc/programs.js";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import fs from "node:fs";
