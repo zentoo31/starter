@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import favicon from "@/assets/favicon.svg";
 import { HomeIcon, LaptopMinimal, CodeXmlIcon, BoltIcon } from "lucide-react";
 
@@ -16,7 +16,7 @@ function Sidebar() {
     },
     {
       title: "Developer",
-      path: "/developer",
+      path: "/develop",
       icon: CodeXmlIcon,
     },
     {
