@@ -11,7 +11,6 @@ ipcMain.handle("system:getInfo", async () => {
         si.osInfo(),
         si.fsSize()
     ]);
-    console.log(cpu)
 
     return {
         cpu, mem, graphics, os, disks
