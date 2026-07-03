@@ -1,9 +1,30 @@
-import { Link } from "react-router-dom";
-import home from "@/assets/home-icon.svg";
+import { Link, NavLink } from "react-router-dom";
 import favicon from "@/assets/favicon.svg";
-import apps from "@/assets/apps.svg";
+import { HomeIcon, LaptopMinimal, CodeXmlIcon, BoltIcon } from "lucide-react";
 
 function Sidebar() {
+  const menu = [
+    {
+      title: "Inicio",
+      path: "/",
+      icon: HomeIcon,
+    },
+    {
+      title: "Programas",
+      path: "/programs",
+      icon: LaptopMinimal,
+    },
+    {
+      title: "Developer",
+      path: "/developer",
+      icon: CodeXmlIcon,
+    },
+    {
+      title: "Configuración",
+      path: "/settings",
+      icon: BoltIcon,
+    },
+  ];
   return (
     <aside className="w-64 bg-zinc-900 text-white h-screen p-4">
       <div className="flex flex-row gap-4">
@@ -11,29 +32,25 @@ function Sidebar() {
         <h1 className="text-2xl mb-8">Starter</h1>
       </div>
       <nav className="flex flex-col gap-2">
-        <Link
-          className="p-2 rounded hover:bg-zinc-800 flex flex-row gap-4"
-          to="/"
-        >
-          <img src={home} className="w-5 h-5" />
-          <span>Inicio</span>
-        </Link>
+        {menu.map((item) => {
+          const Icon = item.icon;
 
-        <Link
-          className="p-2 rounded hover:bg-zinc-800 flex flex-row gap-4"
-          to="/programs"
-        >
-          <img src={apps} className="w-5 h-5" />
-          <span>Programas</span>
-        </Link>
-
-        <Link className="p-2 rounded hover:bg-zinc-800" to="/developer">
-          💻 Developer
-        </Link>
-
-        <Link className="p-2 rounded hover:bg-zinc-800" to="/settings">
-          ⚙ Configuración
-        </Link>
+          return (
+            <NavLink
+              key={item.path}
+              to={item.path}
+              className={({ isActive }) =>
+                `relative flex items-center gap-4 rounded-lg px-3 py-2 transition-all ${isActive
+                  ? "bg-zinc-800 text-white border-l-4 border-zinc-400"
+                  : "text-zinc-400 hover:bg-zinc-800 hover:text-white"
+                }`
+              }
+            >
+              <Icon className="h-5 w-5" />
+              <span>{item.title}</span>
+            </NavLink>
+          );
+        })}
       </nav>
     </aside>
   );
