@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Programs from "./pages/Programs";
 import Layout from "./components/Layout";
 import Develop from "./pages/Develop";
+import Windows from "./pages/Windows";
 function App() {
   return (
     <Layout>
@@ -10,6 +11,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/programs" element={<Programs />} />
         <Route path="/develop" element={<Develop />} />
+        <Route path="/windows" element={<Windows />} />
       </Routes>
     </Layout>
   );
