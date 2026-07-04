@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import favicon from "@/assets/favicon.svg";
-import { HomeIcon, LaptopMinimal, CodeXmlIcon, BoltIcon } from "lucide-react";
+import { HomeIcon, LaptopMinimal, CodeXmlIcon, BoltIcon, KeyRoundIcon, FileTextIcon } from "lucide-react";
 
 function Sidebar() {
   const menu = [
@@ -20,10 +20,21 @@ function Sidebar() {
       icon: CodeXmlIcon,
     },
     {
+      title: "Windows",
+      path: "/windows",
+      icon: KeyRoundIcon,
+    },
+    {
+      title: "Office",
+      path: "/office",
+      icon: FileTextIcon,
+    },
+    {
       title: "Configuración",
       path: "/settings",
       icon: BoltIcon,
     },
+    
   ];
   return (
     <aside className="w-64 bg-zinc-900 text-white h-screen p-4">
