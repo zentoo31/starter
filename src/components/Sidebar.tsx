@@ -15,11 +15,6 @@ function Sidebar() {
       icon: LaptopMinimal,
     },
     {
-      title: "Developer",
-      path: "/develop",
-      icon: CodeXmlIcon,
-    },
-    {
       title: "Windows",
       path: "/windows",
       icon: KeyRoundIcon,
@@ -30,11 +25,16 @@ function Sidebar() {
       icon: FileTextIcon,
     },
     {
+      title: "Developer",
+      path: "/develop",
+      icon: CodeXmlIcon,
+    },
+    {
       title: "Configuración",
       path: "/settings",
       icon: BoltIcon,
     },
-    
+
   ];
   return (
     <aside className="w-64 bg-zinc-900 text-white h-screen p-4">
