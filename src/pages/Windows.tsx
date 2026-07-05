@@ -1,7 +1,7 @@
 import { Sparkles, TriangleAlert } from "lucide-react";
-import CodeCard from "@/components/CodeCard";
-import type { CodeSnippet } from "@/components/CodeCard";
-import type { Step } from "@/types/Step";
+import CodeCard from "@/components/codeCard";
+import type { CodeSnippet } from "@/components/codeCard";
+import type { Step } from "@/types/step";
 import Stepper from "@/components/stepper";
 import windows_powershell from "@/assets/windows/windows_powershell_screenshoot.png";
 import windows_no_activated from "@/assets/windows/windows_no_activated.png";
