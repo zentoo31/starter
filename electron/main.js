@@ -2,6 +2,7 @@ import { app, BrowserWindow } from "electron";
 import "./ipc/system.js";
 import "./ipc/winget.js";
 import "./ipc/programs.js";
+import "./ipc/windows.js";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import fs from "node:fs";
@@ -19,6 +20,7 @@ function createWindow() {
   const win = new BrowserWindow({
     width: 1200,
     height: 800,
+    icon: path.join(process.cwd(), "public", "icon.ico"),
     webPreferences: {
     preload: preloadPath,
     contextIsolation: true,
