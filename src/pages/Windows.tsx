@@ -81,10 +81,7 @@ function Windows() {
             <section className="overflow-hidden rounded-3xl border border-zinc-800 bg-linear-to-br from-zinc-950 via-zinc-900 to-zinc-950 p-6 shadow-2xl shadow-black/20 md:p-8">
                 <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
                     <div className="max-w-2xl space-y-4">
-                        <div className="inline-flex items-center gap-2 rounded-full border border-sky-500/30 bg-sky-500/10 px-3 py-1 text-xs font-medium text-sky-300">
-                            <Sparkles className="size-4" />
-                            Activar Windows
-                        </div>
+                        
                         <div>
                             <h1 className="text-3xl font-bold tracking-tight md:text-4xl">Activar Windows</h1>
                             <p className="mt-2 max-w-xl text-sm leading-6 text-zinc-400 md:text-base">
