@@ -1,0 +1,354 @@
+[
+	{
+		"name": "brave",
+		"id": "brave"
+	},
+	{
+		"name": "chrome",
+		"id": "chrome"
+	},
+	{
+		"name": "edge",
+		"id": "edge"
+	},
+	{
+		"name": "firefox",
+		"id": "firefox"
+	},
+	{
+		"name": "opera",
+		"id": "operaChromium"
+	},
+	{
+		"name": "vivaldi",
+		"id": "vivaldi"
+	},
+	{
+		"name": "epic games",
+		"id": "epic"
+	},
+	{
+		"name": "evernote",
+		"id": "evernote"
+	},
+	{
+		"name": "everything",
+		"id": "everything"
+	},
+	{
+		"name": "googleearth",
+		"id": "googleearth"
+	},
+	{
+		"name": "keepass2",
+		"id": "keepass2"
+	},
+	{
+		"name": "nvda",
+		"id": "nvda"
+	},
+	{
+		"name": "steam",
+		"id": "steam"
+	},
+	{
+		"name": "discord",
+		"id": "discord"
+	},
+	{
+		"name": "pidgin",
+		"id": "pidgin"
+	},
+	{
+		"name": "microsoft teams",
+		"id": "teams"
+	},
+	{
+		"name": "thunderbird",
+		"id": "thunderbird"
+	},
+	{
+		"name": "trillian",
+		"id": "trillian"
+	},
+	{
+		"name": "zoom",
+		"id": "zoom"
+	},
+	{
+		"name": "dropbox",
+		"id": "dropbox"
+	},
+	{
+		"name": "google drive",
+		"id": "googledrivefordesktop"
+	},
+	{
+		"name": "ondrive",
+		"id": "onedrive"
+	},
+	{
+		"name": "sugarsync",
+		"id": "sugarsync"
+	},
+	{
+		"name": "7zip",
+		"id": "7zip"
+	},
+	{
+		"name": "peazip",
+		"id": "peazip"
+	},
+	{
+		"name": "winrar",
+		"id": "winrar"
+	},
+	{
+		"name": "aimp",
+		"id": "aimp"
+	},
+	{
+		"name": "audacity",
+		"id": "audacity"
+	},
+	{
+		"name": "cccp",
+		"id": "cccp"
+	},
+	{
+		"name": "foobar",
+		"id": "foobar"
+	},
+	{
+		"name": "gom",
+		"id": "gom"
+	},
+	{
+		"name": "handbrake",
+		"id": "handbrake"
+	},
+	{
+		"name": "itunes",
+		"id": "itunes"
+	},
+	{
+		"name": "klitecodecs",
+		"id": "klitecodecs"
+	},
+	{
+		"name": "mediamonkey",
+		"id": "mediamonkey"
+	},
+	{
+		"name": "musicbee",
+		"id": "musicbee"
+	},
+	{
+		"name": "spotify",
+		"id": "spotify"
+	},
+	{
+		"name": "vlc",
+		"id": "vlc"
+	},
+	{
+		"name": "winamp",
+		"id": "winamp"
+	},
+	{
+		"name": "blender",
+		"id": "blender"
+	},
+	{
+		"name": "faststone",
+		"id": "faststone"
+	},
+	{
+		"name": "gimp",
+		"id": "gimp"
+	},
+	{
+		"name": "greenshot",
+		"id": "greenshot"
+	},
+	{
+		"name": "inkscape",
+		"id": "inkscape"
+	},
+	{
+		"name": "irfanview",
+		"id": "irfanview"
+	},
+	{
+		"name": "krita",
+		"id": "krita"
+	},
+	{
+		"name": "paint.net",
+		"id": "paint.net"
+	},
+	{
+		"name": "sharex",
+		"id": "sharex"
+	},
+	{
+		"name": "xnview",
+		"id": "xnview"
+	},
+	{
+		"name": "anydesk",
+		"id": "anydesk"
+	},
+	{
+		"name": "ccleaner",
+		"id": "ccleaner"
+	},
+	{
+		"name": "cdburnerxp",
+		"id": "cdburnerxp"
+	},
+	{
+		"name": "glary",
+		"id": "glary"
+	},
+	{
+		"name": "imgburn",
+		"id": "imgburn"
+	},
+	{
+		"name": "infrarecorder",
+		"id": "infrarecorder"
+	},
+	{
+		"name": "launchy",
+		"id": "launchy"
+	},
+	{
+		"name": "openshell",
+		"id": "openshell"
+	},
+	{
+		"name": "realvncserver",
+		"id": "realvncserver"
+	},
+	{
+		"name": "realvncviewer",
+		"id": "realvncviewer"
+	},
+	{
+		"name": "revo uninstaller",
+		"id": "revo"
+	},
+	{
+		"name": "teamviewer15",
+		"id": "teamviewer15"
+	},
+	{
+		"name": "teracopy",
+		"id": "teracopy"
+	},
+	{
+		"name": "tightvnc",
+		"id": "tightvnc"
+	},
+	{
+		"name": "windirstat",
+		"id": "windirstat"
+	},
+	{
+		"name": "wiztree",
+		"id": "wiztree"
+	},
+	{
+		"name": "cutepdf",
+		"id": "cutepdf"
+	},
+	{
+		"name": "foxitpdf",
+		"id": "foxit"
+	},
+	{
+		"name": "libreoffice",
+		"id": "libreoffice"
+	},
+	{
+		"name": "openoffice",
+		"id": "openoffice"
+	},
+	{
+		"name": "sumatrapdf",
+		"id": "sumatrapdf"
+	},
+	{
+		"name": "avast",
+		"id": "avast"
+	},
+	{
+		"name": "avg",
+		"id": "avg"
+	},
+	{
+		"name": "avira",
+		"id": "avira"
+	},
+	{
+		"name": "malwarebytes",
+		"id": "malwarebytes"
+	},
+	{
+		"name": "spybot2",
+		"id": "spybot2"
+	},
+	{
+		"name": "cursor",
+		"id": "cursor"
+	},
+	{
+		"name": "eclipse",
+		"id": "eclipse"
+	},
+	{
+		"name": "filezilla",
+		"id": "filezilla"
+	},
+	{
+		"name": "git",
+		"id": "git"
+	},
+	{
+		"name": "notepad++",
+		"id": "notepadplusplus"
+	},
+	{
+		"name": "putty",
+		"id": "putty"
+	},
+	{
+		"name": "python",
+		"id": "python"
+	},
+	{
+		"name": "python3",
+		"id": "python3"
+	},
+	{
+		"name": "pythona3",
+		"id": "pythona3"
+	},
+	{
+		"name": "pythonx3",
+		"id": "pythonx3"
+	},
+	{
+		"name": "vscode",
+		"id": "vscode"
+	},
+	{
+		"name": "winmerge",
+		"id": "winmerge"
+	},
+	{
+		"name": "winscp",
+		"id": "winscp"
+	}
+]
