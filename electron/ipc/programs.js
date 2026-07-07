@@ -1,4 +1,4 @@
-import { app, ipcMain } from "electron";
+import { app, ipcMain, shell } from "electron";
 import fs from "node:fs";
 import fsp from "node:fs/promises";
 import https from "node:https";
@@ -6,6 +6,25 @@ import path from "node:path";
 import { URL } from "node:url";
 import { runLoggedProcess } from "./logs.js";
 import { runWinget } from "./winget.js";
+
+const niniteProgramsPath = path.resolve(process.cwd(), "src", "data", "programs_ninite.json");
+
+async function readNinitePrograms() {
+  const raw = await fsp.readFile(niniteProgramsPath, "utf8");
+  const parsed = JSON.parse(raw);
+
+  return Array.isArray(parsed) ? parsed : [];
+}
+
+function buildNiniteUrl(selectedIds) {
+  const uniqueIds = [...new Set(selectedIds.map((id) => String(id).trim().toLowerCase()).filter(Boolean))];
+
+  if (!uniqueIds.length) {
+    return null;
+  }
+
+  return `https://ninite.com/${uniqueIds.join("-")}/ninite.exe`;
+}
 
 function downloadFile(url, destination) {
   return new Promise((resolve, reject) => {
@@ -38,7 +57,11 @@ function downloadFile(url, destination) {
   });
 }
 
-async function installProgramDirect(event, program) {
+function getNiniteFileName(selectedIds) {
+  return `ninite-${selectedIds.join("-")}.exe`;
+}
+
+async function openDirectDownload(program) {
   if (!program?.methods?.direct?.url) {
     return {
       success: false,
@@ -48,36 +71,14 @@ async function installProgramDirect(event, program) {
     };
   }
 
-  const tempDir = await fsp.mkdtemp(path.join(app.getPath("temp"), "starter-"));
-  const installerName = getFileNameFromUrl(program.methods.direct.url);
-  const installerPath = path.join(tempDir, installerName);
-
-  await downloadFile(program.methods.direct.url, installerPath);
-
-  const silentArgs = program.methods.direct.silentArgs?.length
-    ? program.methods.direct.silentArgs
-    : ["/silent", "/install"];
-
-  const result = await runLoggedProcess(event, installerPath, silentArgs, {
-    source: "direct",
-    action: "install",
-    programId: program.id,
-    programName: program.name,
-  });
+  await shell.openExternal(program.methods.direct.url);
 
   return {
-    success: result.code === 0,
-    code: result.code,
+    success: true,
+    code: 0,
     stdout: "",
     stderr: "",
   };
-}
-
-function getFileNameFromUrl(url) {
-  const parsedUrl = new URL(url);
-  const fileName = path.basename(parsedUrl.pathname);
-
-  return fileName || "installer.exe";
 }
 
 function isWingetInstalledOutput(output, packageId) {
@@ -116,13 +117,56 @@ ipcMain.handle("program:check-installed", async (_event, program) => {
   }
 });
 
-ipcMain.handle("program:install-direct", async (event, program) => {
-  return installProgramDirect(event, program);
+ipcMain.handle("program:open-ninite", async (_event, selectedIds = []) => {
+  try {
+    const ninitePrograms = await readNinitePrograms();
+    const availableIds = new Set(ninitePrograms.map((program) => String(program.id).trim().toLowerCase()));
+    const matchedIds = selectedIds
+      .map((id) => String(id).trim().toLowerCase())
+      .filter((id) => availableIds.has(id));
+
+    const url = buildNiniteUrl(matchedIds);
+
+    if (!url) {
+      return {
+        success: false,
+        url: null,
+        error: "Selecciona al menos un programa compatible con Ninite.",
+      };
+    }
+
+    const tempDir = await fsp.mkdtemp(path.join(app.getPath("temp"), "starter-ninite-"));
+    const installerPath = path.join(tempDir, getNiniteFileName(matchedIds));
+
+    await downloadFile(url, installerPath);
+    await runLoggedProcess(_event, installerPath, [], {
+      source: "ninite",
+      action: "install",
+      programId: matchedIds.join("-"),
+      programName: "Ninite",
+    });
+
+    return {
+      success: true,
+      url: installerPath,
+      error: null,
+    };
+  } catch (error) {
+    return {
+      success: false,
+      url: null,
+      error: error instanceof Error ? error.message : "No se pudo generar el enlace de Ninite",
+    };
+  }
+});
+
+ipcMain.handle("program:install-direct", async (_event, program) => {
+  return openDirectDownload(program);
 });
 
 ipcMain.handle("program:install", async (event, program) => {
   if (program?.methods?.direct?.url) {
-    return installProgramDirect(event, program);
+    return openDirectDownload(program);
   }
 
   if (program?.methods?.winget) {
