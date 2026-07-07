@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import programsData from "@/data/programs.json";
+import niniteProgramsData from "@/data/programs_ninite.json";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/card";
 import { Spinner } from "@/components/spinner";
 import { BadgeInfo, Download, Search, TriangleAlert, Trash2 } from "lucide-react";
@@ -17,7 +18,13 @@ type Program = {
   };
 };
 
+type NiniteProgram = {
+  id: string;
+  name: string;
+};
+
 const programs = (Array.isArray(programsData) ? programsData : [programsData]) as Program[];
+const ninitePrograms = (Array.isArray(niniteProgramsData) ? niniteProgramsData : [niniteProgramsData]) as NiniteProgram[];
 
 function Programs() {
   const [query, setQuery] = useState("");
@@ -27,6 +34,7 @@ function Programs() {
   const [statusMessage, setStatusMessage] = useState<string | null>(null);
   const [installedPrograms, setInstalledPrograms] = useState<Record<string, boolean>>({});
   const [checkingPrograms, setCheckingPrograms] = useState<Record<string, boolean>>({});
+  const [selectedNiniteIds, setSelectedNiniteIds] = useState<string[]>([]);
 
   useEffect(() => {
     async function checkWinget() {
@@ -71,6 +79,30 @@ function Programs() {
     }));
   }
 
+  function toggleNiniteProgram(id: string) {
+    setSelectedNiniteIds((current) =>
+      current.includes(id) ? current.filter((item) => item !== id) : [...current, id],
+    );
+  }
+
+  async function handleGetNinite() {
+    if (!selectedNiniteIds.length) {
+      setStatusMessage("Selecciona al menos un programa para generar el enlace de Ninite.");
+      return;
+    }
+
+    setStatusMessage(null);
+
+    const result = await window.electronAPI.openNiniteDownload(selectedNiniteIds);
+
+    if (result.success) {
+      setStatusMessage(`Ninite descargado y abierto desde temporal: ${result.url}`);
+      return;
+    }
+
+    setStatusMessage(result.error ?? "No se pudo generar el enlace de Ninite.");
+  }
+
   const filteredPrograms = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
 
@@ -87,12 +119,12 @@ function Programs() {
   }, [query]);
 
   async function handleInstall(program: Program) {
-    if (!program.methods?.direct?.url && !program.methods?.winget) {
-      setStatusMessage(`No hay método de instalación configurado para ${program.name}.`);
+    if (!program.methods?.winget) {
+      setStatusMessage(`No hay instalación por winget disponible para ${program.name}.`);
       return;
     }
 
-    if (!program.methods?.direct?.url && !wingetStatus?.installed) {
+    if (!wingetStatus?.installed) {
       setStatusMessage("Winget no está instalado en este sistema.");
       return;
     }
@@ -147,7 +179,7 @@ function Programs() {
       <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div>
           <h1 className="text-3xl font-bold">Programas</h1>
-          <p className="mt-1 text-sm text-zinc-400">Busca un programa y ejecútalo desde la URL directa o desde winget, según la configuración.</p>
+          <p className="mt-1 text-sm text-zinc-400">Selecciona programas para Ninite, y usa las descargas directas cuando no haya winget.</p>
         </div>
 
         <div className="rounded-xl border border-zinc-800 bg-zinc-900/80 px-4 py-3 text-sm text-zinc-300">
@@ -170,6 +202,45 @@ function Programs() {
         </div>
       </div>
 
+      <section className="mt-8 space-y-4">
+        <div className="flex items-end justify-between gap-4">
+          <div>
+            <h2 className="text-2xl font-semibold text-white">Ninite</h2>
+            <p className="mt-1 text-sm text-zinc-400">Marca los programas que quieras incluir en el instalador de Ninite.</p>
+          </div>
+
+          <button
+            type="button"
+            onClick={handleGetNinite}
+            className="inline-flex items-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-medium text-zinc-950 transition hover:bg-zinc-200"
+          >
+            <Download className="size-4" />
+            Get Ninite
+          </button>
+        </div>
+
+        <div className="overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900">
+          <div className="overflow-x-auto">
+            <div className="grid grid-cols-2 gap-x-8 gap-y-2">
+              {ninitePrograms.map((program) => (
+                <label
+                  key={program.id}
+                  className="flex items-center gap-3 rounded-md p-2 hover:bg-zinc-900 cursor-pointer"
+                >
+                  <input
+                    type="checkbox"
+                    checked={selectedNiniteIds.includes(program.id)}
+                    onChange={() => toggleNiniteProgram(program.id)}
+                    className="h-4 w-4 rounded border-zinc-600 bg-zinc-900 text-white"
+                  />
+                  <span className="text-zinc-100">{program.name}</span>
+                </label>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <div className="mt-4 flex items-center gap-3 rounded-xl border border-zinc-800 bg-zinc-900 px-4 py-3">
         <Search className="size-4 text-zinc-400" />
         <input
@@ -191,8 +262,10 @@ function Programs() {
         {filteredPrograms.map((program) => {
           const isInstalled = installedPrograms[program.id] === true;
           const isCheckingInstalled = checkingPrograms[program.id] === true;
-          const canInstall = Boolean((program.methods?.direct?.url || (wingetStatus?.installed && program.methods?.winget)) && !isInstalled);
+          const canInstall = Boolean(wingetStatus?.installed && program.methods?.winget && !isInstalled);
           const canUninstall = Boolean(wingetStatus?.installed && program.methods?.winget);
+          const hasDirectDownload = Boolean(program.methods?.direct?.url);
+          const directDownloadUrl = program.methods?.direct?.url;
 
           return (
             <Card key={program.id} className="border-zinc-800 bg-zinc-900 text-white">
@@ -232,34 +305,38 @@ function Programs() {
                 </div>
 
                 <div className="mt-5 flex flex-wrap gap-3">
-                  <button
-                    type="button"
-                    onClick={() => handleInstall(program)}
-                    disabled={!canInstall || installingId === program.id}
-                    className="inline-flex items-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-medium text-zinc-950 transition cursor-pointer disabled:opacity-50"
-                  >
-                    {installingId === program.id ? <Spinner className="size-4" /> : <Download className="size-4" />}
-                    {installingId === program.id ? "Instalando..." : isInstalled ? "Ya instalado" : "Instalar"}
-                  </button>
+                  {canInstall ? (
+                    <button
+                      type="button"
+                      onClick={() => handleInstall(program)}
+                      disabled={installingId === program.id}
+                      className="inline-flex items-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-medium text-zinc-950 transition cursor-pointer disabled:opacity-50"
+                    >
+                      {installingId === program.id ? <Spinner className="size-4" /> : <Download className="size-4" />}
+                      {installingId === program.id ? "Instalando..." : isInstalled ? "Ya instalado" : "Instalar"}
+                    </button>
+                  ) : null}
 
-                  <button
-                    type="button"
-                    onClick={() => handleUninstall(program)}
-                    disabled={!canUninstall || installingId === program.id || !isInstalled}
-                    className="inline-flex items-center gap-2 rounded-lg border border-zinc-700 px-4 py-2 text-sm font-medium text-zinc-200 transition disabled:cursor-not-allowed disabled:opacity-50 hover:bg-zinc-800"
-                  >
-                    {installingId === program.id ? <Spinner className="size-4" /> : <Trash2 className="size-4" />}
-                    Desinstalar
-                  </button>
+                  {canUninstall ? (
+                    <button
+                      type="button"
+                      onClick={() => handleUninstall(program)}
+                      disabled={installingId === program.id || !isInstalled}
+                      className="inline-flex items-center gap-2 rounded-lg border border-zinc-700 px-4 py-2 text-sm font-medium text-zinc-200 transition disabled:cursor-not-allowed disabled:opacity-50 hover:bg-zinc-800"
+                    >
+                      {installingId === program.id ? <Spinner className="size-4" /> : <Trash2 className="size-4" />}
+                      Desinstalar
+                    </button>
+                  ) : null}
 
-                  {program.methods?.direct?.url ? (
+                  {hasDirectDownload && directDownloadUrl ? (
                     <a
-                      href={program.methods.direct.url}
+                      href={directDownloadUrl}
                       target="_blank"
                       rel="noreferrer"
                       className="inline-flex items-center gap-2 rounded-lg border border-zinc-700 px-4 py-2 text-sm font-medium text-zinc-200 transition hover:bg-zinc-800"
                     >
-                      Descargar
+                      Descargar directa
                     </a>
                   ) : null}
                 </div>
