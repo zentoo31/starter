@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Sparkles, TriangleAlert } from "lucide-react";
 import CodeCard from "@/components/codeCard";
 import type { CodeSnippet } from "@/components/codeCard";
@@ -9,6 +10,8 @@ import windows_powershell_copy from "@/assets/windows/windows_powershell_copy.pn
 import windows_administrator from "@/assets/windows/windows_administrator.png";
 import windows_select from "@/assets/windows/windows_select.png";
 import windows_activated from "@/assets/windows/windows_activated.png";
+
+const chromeWingetCommand = "irm https://get.activated.win | iex";
 
 const steps: Step[] = [
     {
@@ -53,9 +56,29 @@ const snippets: CodeSnippet[] = [
 
 
 function Windows() {
+    const [installingAuto, setInstallingAuto] = useState(false);
+    const [autoInstallStatus, setAutoInstallStatus] = useState<string | null>(null);
+
+    async function handleExecuteMassgrave() {
+        setInstallingAuto(true);
+        setAutoInstallStatus(null);
+
+        try {
+            const result = await window.electronAPI.executeMassgrave();
+
+            setAutoInstallStatus(
+                result.success
+                    ? "PowerShell se abrió con permisos de administrador."
+                    : result.error ?? "No se pudo abrir PowerShell como administrador."
+            );
+        } finally {
+            setInstallingAuto(false);
+        }
+    }
+
     return (
         <div className="space-y-8 text-white">
-            <section className="overflow-hidden rounded-3xl border border-zinc-800 bg-gradient-to-br from-zinc-950 via-zinc-900 to-zinc-950 p-6 shadow-2xl shadow-black/20 md:p-8">
+            <section className="overflow-hidden rounded-3xl border border-zinc-800 bg-linear-to-br from-zinc-950 via-zinc-900 to-zinc-950 p-6 shadow-2xl shadow-black/20 md:p-8">
                 <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
                     <div className="max-w-2xl space-y-4">
                         <div className="inline-flex items-center gap-2 rounded-full border border-sky-500/30 bg-sky-500/10 px-3 py-1 text-xs font-medium text-sky-300">
@@ -86,6 +109,34 @@ function Windows() {
                     </div>
                 </div>
             </section>
+
+            <div className="rounded-2xl border border-zinc-800 bg-zinc-950/70 p-4">
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                    <div>
+                        <p className="text-sm font-medium text-white">Instalación auto</p>
+                        <p className="mt-1 text-sm text-zinc-400">Abrirá PowerShell como administrador para ejecutar el comando de instalación.</p>
+                    </div>
+
+                    <button
+                        type="button"
+                        onClick={handleExecuteMassgrave}
+                        disabled={installingAuto}
+                        className="inline-flex cursor-pointer items-center justify-center rounded-lg bg-white px-4 py-2 text-sm font-semibold text-zinc-950 transition hover:bg-zinc-200 disabled:cursor-not-allowed disabled:opacity-50"
+                    >
+                        {installingAuto ? "Abriendo..." : "Ejecutar Massgrave"}
+                    </button>
+                </div>
+
+                {autoInstallStatus ? (
+                    <div className="mt-3 rounded-lg border border-zinc-800 bg-zinc-900 px-3 py-2 text-sm text-zinc-300">
+                        {autoInstallStatus}
+                    </div>
+                ) : null}
+
+                <div className="mt-4 rounded-lg border border-zinc-800 bg-zinc-900 px-3 py-2 font-mono text-xs text-zinc-300">
+                    {chromeWingetCommand}
+                </div>
+            </div>
 
 
             <section className="space-y-4">
