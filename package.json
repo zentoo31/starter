@@ -57,7 +57,13 @@
         "portable",
         "nsis"
       ],
-      "icon": "build/icon.ico"
-    }
+      "icon": "public/icon.ico"
+    },
+    "extraResources": [
+      {
+        "from": "resources",
+        "to": "resources"
+      }
+    ]
   }
 }
