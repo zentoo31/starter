@@ -1,5 +1,6 @@
+import type { Step } from "@/types/step";
 
-function Stepper({ title, description, imageLabel }: { title: string; description: string; imageLabel: string }) {
+function Stepper({ title, description, imageLabel }: Step) {
     return (
         <article key={title} className="overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/80">
             <div className="border-b border-zinc-800 p-4">
