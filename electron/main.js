@@ -22,13 +22,13 @@ function createWindow() {
     height: 800,
     icon: path.join(process.cwd(), "public", "icon.ico"),
     webPreferences: {
-    preload: preloadPath,
-    contextIsolation: true,
-    nodeIntegration: false,
-  },
+      preload: preloadPath,
+      contextIsolation: true,
+      nodeIntegration: false,
+    },
   });
 
-  win.loadURL("http://localhost:5173");
+  win.loadFile(path.join(__dirname, "../dist/index.html"));
   console.log("ventana")
 }
 
