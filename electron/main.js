@@ -27,7 +27,7 @@ function createWindow() {
       nodeIntegration: false,
     },
   });
-
+  win.removeMenu();
   win.loadURL("http://localhost:5173");
   console.log("ventana")
 }
