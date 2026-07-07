@@ -212,7 +212,7 @@ function Programs() {
           <button
             type="button"
             onClick={handleGetNinite}
-            className="inline-flex items-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-medium text-zinc-950 transition hover:bg-zinc-200"
+            className="cursor-pointer inline-flex items-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-medium text-zinc-950 transition hover:bg-zinc-200"
           >
             <Download className="size-4" />
             Get Ninite
