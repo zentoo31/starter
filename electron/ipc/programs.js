@@ -7,8 +7,10 @@ import { URL } from "node:url";
 import { runLoggedProcess } from "./logs.js";
 import { runWinget } from "./winget.js";
 
-const niniteProgramsPath = path.resolve(process.cwd(), "src", "data", "programs_ninite.json");
-
+const niniteProgramsPath = app.isPackaged
+  ? path.join(process.resourcesPath, "resources", "programs_ninite.json")
+  : path.join(process.cwd(), "resources", "programs_ninite.json");
+  
 async function readNinitePrograms() {
   const raw = await fsp.readFile(niniteProgramsPath, "utf8");
   const parsed = JSON.parse(raw);

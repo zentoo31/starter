@@ -1,0 +1,15 @@
+{
+  "id": "Google.Chrome",
+  "name": "Google Chrome",
+  "category": "Browser",
+  "methods": {
+    "winget": "Google.Chrome",
+    "direct": {
+      "url": "https://dl.google.com/chrome/install/latest/chrome_installer.exe",
+      "silentArgs": [
+        "/silent",
+        "/install"
+      ]
+    }
+  }
+}
