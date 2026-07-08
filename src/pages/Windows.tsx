@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { TriangleAlert } from "lucide-react";
-import type { CodeSnippet } from "@/components/codeCard";
 import type { Step } from "@/types/step";
 import Stepper from "@/components/stepper";
 import windows_powershell from "@/assets/windows/windows_powershell_screenshoot.png";
@@ -45,13 +44,6 @@ const steps: Step[] = [
     }
 ];
 
-const snippets: CodeSnippet[] = [
-    {
-        title: "Comando principal",
-        description: "Reemplázalo por el comando real que quieras enseñar en el tutorial.",
-        code: "irm https://get.activated.win | iex",
-    }
-];
 
 
 function Windows() {
