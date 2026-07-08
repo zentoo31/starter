@@ -1,73 +1,121 @@
-# React + TypeScript + Vite
+# 🚀 Starter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Starter** es una aplicación de escritorio desarrollada con **Electron**, **React** y **TypeScript** cuyo objetivo es automatizar las tareas más comunes después de instalar Windows.
 
-Currently, two official plugins are available:
+En lugar de descargar e instalar manualmente cada programa o realizar configuraciones una por una, Starter centraliza todo en una única aplicación con una interfaz moderna y fácil de usar.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+> ⚠️ **Proyecto en desarrollo.** Muchas características aún están en construcción.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# ✨ Características
 
-## Expanding the ESLint configuration
+## 🖥 Información del sistema
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Visualiza información detallada del equipo:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* Procesador
+* Memoria RAM
+* Tarjeta gráfica
+* Sistema operativo
+* Almacenamiento
+* Arquitectura del sistema
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📦 Instalación de programas *(En desarrollo)*
+
+Instala rápidamente aplicaciones populares como:
+
+* Google Chrome
+* Firefox
+* Brave
+* Visual Studio Code
+* Git
+* Node.js
+* Discord
+* VLC
+* OBS Studio
+* Spotify
+
+La aplicación utilizará automáticamente el mejor método disponible:
+
+* Winget
+* Instaladores silenciosos
+* (Próximamente) Chocolatey
+* (Próximamente) Scoop
+
+---
+
+## ⚙ Configuración del sistema *(Próximamente)*
+
+Automatización de configuraciones comunes de Windows:
+
+* Configuración de privacidad
+* Opciones de rendimiento
+* Ajustes de Windows Update
+* Configuración del Explorador de archivos
+* Otras optimizaciones
+
+---
+
+## 🧹 Mantenimiento *(Próximamente)*
+
+Funciones para facilitar el mantenimiento del sistema:
+
+* Limpieza de archivos temporales
+* Gestión de programas instalados
+* Información de almacenamiento
+* Herramientas del sistema
+
+---
+
+# 🛠 Tecnologías
+
+* Electron
+* React
+* TypeScript
+* Vite
+* Tailwind CSS
+* shadcn/ui
+* React Router
+* Lucide Icons
+* systeminformation
+
+---
+
+# 📂 Estructura del proyecto
+
+```text
+starter/
+│
+├── electron/
+│   ├── ipc/
+│   ├── managers/
+│   ├── preload.cjs
+│   └── main.js
+│
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── context/
+│   ├── data/
+│   ├── pages/
+│   ├── services/
+│   ├── types/
+│   └── utils/
+│
+├── public/
+└── package.json
 ```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+# 📖 Objetivo
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Starter busca convertirse en una herramienta todo en uno para preparar un equipo recién instalado, permitiendo automatizar la instalación de software, consultar información del sistema y aplicar configuraciones de Windows desde una única aplicación.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+# 📄 Licencia
+
+Este proyecto se distribuye bajo la licencia **GNU**.
