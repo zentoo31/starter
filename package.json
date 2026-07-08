@@ -43,6 +43,8 @@
   },
   "build": {
     "appId": "com.zentoo.starter",
+    "description": "Starter application",
+    "author": "zentoo31",
     "productName": "Starter",
     "directories": {
       "output": "release-1.0.0"
