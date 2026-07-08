@@ -27,8 +27,8 @@ function createWindow() {
       nodeIntegration: false,
     },
   });
-
-  win.loadFile(path.join(__dirname, "../dist/index.html"));
+  win.removeMenu();
+  win.loadURL("http://localhost:5173");
   console.log("ventana")
 }
 

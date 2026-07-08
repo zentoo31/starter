@@ -24,16 +24,7 @@ function Sidebar() {
       path: "/office",
       icon: FileTextIcon,
     },
-    {
-      title: "Developer",
-      path: "/develop",
-      icon: CodeXmlIcon,
-    },
-    {
-      title: "Configuración",
-      path: "/settings",
-      icon: BoltIcon,
-    },
+    
 
   ];
   return (

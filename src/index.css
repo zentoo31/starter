@@ -1,6 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
+::-webkit-scrollbar {
+    width: 8px;
+}
 
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}
 body {
     background-color: #18181b;
     color: lightgray;

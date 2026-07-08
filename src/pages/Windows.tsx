@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { Sparkles, TriangleAlert } from "lucide-react";
-import CodeCard from "@/components/codeCard";
+import { TriangleAlert } from "lucide-react";
 import type { CodeSnippet } from "@/components/codeCard";
 import type { Step } from "@/types/step";
 import Stepper from "@/components/stepper";
@@ -78,22 +77,19 @@ function Windows() {
 
     return (
         <div className="space-y-8 text-white">
-            <section className="overflow-hidden rounded-3xl border border-zinc-800 bg-linear-to-br from-zinc-950 via-zinc-900 to-zinc-950 p-6 shadow-2xl shadow-black/20 md:p-8">
+            <section className="overflow-hidden border border-zinc-800 bg-linear-to-br from-zinc-950 via-zinc-900 to-zinc-950 p-6 shadow-2xl shadow-black/20 md:p-8">
                 <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
                     <div className="max-w-2xl space-y-4">
-                        <div className="inline-flex items-center gap-2 rounded-full border border-sky-500/30 bg-sky-500/10 px-3 py-1 text-xs font-medium text-sky-300">
-                            <Sparkles className="size-4" />
-                            Activar Windows
-                        </div>
+
                         <div>
                             <h1 className="text-3xl font-bold tracking-tight md:text-4xl">Activar Windows</h1>
                             <p className="mt-2 max-w-xl text-sm leading-6 text-zinc-400 md:text-base">
-                                Este es un tutorial para como activar Windows de manera sencilla y rapída. Solo sigue los pasos y tendrás tu Windows activado en poco tiempo.
+                                Activar Windows de manera sencilla y rápida. Solo sigue los pasos y tendrás tu Windows activado en poco tiempo.
                             </p>
                         </div>
 
                         <div className="rounded-xl border border-zinc-800 bg-zinc-900/80 px-4 py-3 text-sm text-zinc-300">
-                            <div className="flex items-center gap-2 text-amber-400">
+                            <div className="flex items-center gap-2 text-amber-300">
                                 <TriangleAlert className="size-4" />
                                 No olvides DESACTIVAR tu antivirus antes de ejecutar el script, ya que podría bloquear la activación.
                             </div>
@@ -150,20 +146,6 @@ function Windows() {
                     ))}
                 </div>
             </section>
-
-            <section className="space-y-4">
-                <div>
-                    <h2 className="text-2xl font-semibold text-white">Snippets copiables</h2>
-                    <p className="mt-1 text-sm text-zinc-400">Usa estos bloques para mostrar comandos, rutas o configuraciones que el usuario pueda copiar con un clic.</p>
-                </div>
-
-                <div className="grid gap-4 xl:grid-cols-3">
-                    {snippets.map((snippet) => (
-                        <CodeCard key={snippet.title} {...snippet} />
-                    ))}
-                </div>
-            </section>
-
 
         </div>
     );

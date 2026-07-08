@@ -119,6 +119,26 @@ ipcMain.handle("program:check-installed", async (_event, program) => {
   }
 });
 
+ipcMain.handle("program:download-open-program", async (_event, program) => {
+  const installerPath = path.join(
+    app.getPath("temp"),
+    `${program.id}_installer.exe`
+  );
+
+  await downloadFile(program.url, installerPath);
+
+  const error = await shell.openPath(installerPath);
+
+  if (error) {
+    throw new Error(error);
+  }
+
+  return {
+    success: true,
+    message: `${program.name} descargado y abierto.`,
+  };
+});
+
 ipcMain.handle("program:open-ninite", async (_event, selectedIds = []) => {
   try {
     const ninitePrograms = await readNinitePrograms();
