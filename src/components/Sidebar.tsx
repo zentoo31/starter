@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import favicon from "@/assets/favicon.svg";
-import { HomeIcon, LaptopMinimal, CodeXmlIcon, BoltIcon, KeyRoundIcon, FileTextIcon } from "lucide-react";
+import { HomeIcon, LaptopMinimal, KeyRoundIcon, FileTextIcon } from "lucide-react";
 
 function Sidebar() {
   const menu = [
