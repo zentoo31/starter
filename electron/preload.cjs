@@ -6,6 +6,7 @@ contextBridge.exposeInMainWorld("electronAPI", {
   getSystemInfo: () => ipcRenderer.invoke("system:getInfo"),
   checkWinget: () => ipcRenderer.invoke("winget:check"),
   checkProgramInstalled: (program) => ipcRenderer.invoke("program:check-installed", program),
+  downloadOpenProgram: (program) => ipcRenderer.invoke("program:download-open-program", program),
   openNiniteDownload: (selectedIds) => ipcRenderer.invoke("program:open-ninite", selectedIds),
   installProgram: (program) => ipcRenderer.invoke("program:install", program),
   uninstallProgram: (program) => ipcRenderer.invoke("program:uninstall", program),
