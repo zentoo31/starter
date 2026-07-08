@@ -10,7 +10,7 @@ import { runWinget } from "./winget.js";
 const niniteProgramsPath = app.isPackaged
   ? path.join(process.resourcesPath, "resources", "programs_ninite.json")
   : path.join(process.cwd(), "resources", "programs_ninite.json");
-  
+
 async function readNinitePrograms() {
   const raw = await fsp.readFile(niniteProgramsPath, "utf8");
   const parsed = JSON.parse(raw);
@@ -117,6 +117,26 @@ ipcMain.handle("program:check-installed", async (_event, program) => {
       installed: false,
     };
   }
+});
+
+ipcMain.handle("program:download-open-program", async (_event, program) => {
+  const installerPath = path.join(
+    app.getPath("temp"),
+    `${program.id}_installer.exe`
+  );
+
+  await downloadFile(program.url, installerPath);
+
+  const error = await shell.openPath(installerPath);
+
+  if (error) {
+    throw new Error(error);
+  }
+
+  return {
+    success: true,
+    message: `${program.name} descargado y abierto.`,
+  };
 });
 
 ipcMain.handle("program:open-ninite", async (_event, selectedIds = []) => {
