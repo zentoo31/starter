@@ -4,6 +4,7 @@ export interface SystemInfo {
   graphics: GraphicsInfo;
   os: OSInfo;
   disks: DiskInfo[];
+  networkInterfaces: NetworkInterfaceInfo[];
 }
 
 export interface CPUInfo {
@@ -53,4 +54,20 @@ export interface ControllerInfo{
   memoryTotal: number;
   memoryFree: number;
   memoryUsed: number;
+}
+
+export interface NetworkInterfaceInfo {
+  iface: string;
+  ifaceName: string;
+  default: boolean;
+  ip4: string;
+  ip4subnet: string;
+  ip6: string;
+  ip6subnet: string;
+  mac: string;
+  virtual: boolean;
+  type: string;
+  speed: number;
+  dhcp: boolean;
+
 }
