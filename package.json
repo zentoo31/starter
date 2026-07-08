@@ -1,6 +1,8 @@
 {
   "name": "starter",
   "private": true,
+  "author": "zentoo31",
+  "description": "Starter Application",
   "version": "1.0.0",
   "type": "module",
   "main": "electron/main.js",
@@ -43,8 +45,6 @@
   },
   "build": {
     "appId": "com.zentoo.starter",
-    "description": "Starter application",
-    "author": "zentoo31",
     "productName": "Starter",
     "directories": {
       "output": "release-1.0.0"
