@@ -34,5 +34,17 @@
     "name": "Node JS v24.18.0",
     "category": "Development",
     "url": "https://nodejs.org/dist/v24.18.0/node-v24.18.0-x64.msi"
+  },
+  {
+    "id": "MediBang.Paint",
+    "name": "MediBang Paint",
+    "category": "Drawing",
+    "url": "https://medibangpaint.com/static/installer/MediBangPaintPro/MediBangPaintProSetup-29.1-64bit.exe"
+  },
+  {
+    "id": "Clip Studio Paint",
+    "name": "Clip Studio Paint",
+    "category": "Drawing",
+    "url": "https://www.clipstudio.net/gd?id=csp-latest-install-win"
   }
 ]
