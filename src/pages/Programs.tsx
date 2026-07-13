@@ -102,7 +102,7 @@ function Programs() {
           </div>
 
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-            <div className="flex items-center gap-2 rounded-xl border border-zinc-800 bg-zinc-900/80 px-3 py-2 text-sm text-zinc-300">
+            <div className="flex items-center gap-2 border border-zinc-800 bg-zinc-900/80 px-3 py-2 text-sm text-zinc-300">
               <Search className="size-4 shrink-0 text-zinc-500" />
               <input
                 type="search"
@@ -116,7 +116,7 @@ function Programs() {
             <button
               type="button"
               onClick={handleGetNinite}
-              className="inline-flex cursor-pointer items-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-medium text-zinc-950 transition hover:bg-zinc-200"
+              className="inline-flex cursor-pointer items-center gap-2 bg-white px-4 py-2 text-sm font-medium text-zinc-950 transition hover:bg-zinc-200"
             >
               <Download className="size-4" />
               Get Ninite
@@ -124,13 +124,13 @@ function Programs() {
           </div>
         </div>
 
-        <div className="overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900">
+        <div className="overflow-hidden border border-zinc-800 bg-zinc-900">
           <div className="overflow-x-auto">
             <div className="grid gap-2 p-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {filteredNinitePrograms.length ? filteredNinitePrograms.map((program) => (
                 <label
                   key={program.id}
-                  className="flex cursor-pointer items-center gap-3 rounded-xl border border-zinc-800 bg-zinc-950/40 p-3 transition hover:border-zinc-700 hover:bg-zinc-800/60"
+                  className="flex cursor-pointer items-center gap-3 border border-zinc-800 bg-zinc-950/40 p-3 transition hover:border-zinc-700 hover:bg-zinc-800/60"
                 >
                   <input
                     type="checkbox"
@@ -161,7 +161,7 @@ function Programs() {
             <p className="mt-1 text-sm text-zinc-400">Busca un programa y abre su instalador oficial sin pasar por Ninite.</p>
           </div>
 
-          <div className="flex items-center gap-2 rounded-xl border border-zinc-800 bg-zinc-900/80 px-3 py-2 text-sm text-zinc-300 lg:w-80">
+          <div className="flex items-center gap-2 border border-zinc-800 bg-zinc-900/80 px-3 py-2 text-sm text-zinc-300 lg:w-80">
             <Search className="size-4 shrink-0 text-zinc-500" />
             <input
               type="search"
@@ -177,7 +177,7 @@ function Programs() {
           {filteredDirectPrograms.length ? filteredDirectPrograms.map((program) => (
             <article
               key={program.id}
-              className="rounded-2xl border border-zinc-800 bg-zinc-900/80 p-4 shadow-lg shadow-black/10 transition hover:-translate-y-0.5 hover:border-zinc-700"
+              className="border border-zinc-800 bg-zinc-900/80 p-4 shadow-lg shadow-black/10 transition hover:-translate-y-0.5 hover:border-zinc-700"
             >
               <div className="flex items-start justify-between gap-3">
                 <div className="flex min-w-0 items-start gap-3">
@@ -197,7 +197,7 @@ function Programs() {
               <button
                 type="button"
                 onClick={() => downloadOpenProgram(program)}
-                className="cursor-pointer mt-4 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-medium text-zinc-950 transition hover:bg-zinc-200"
+                className="cursor-pointer mt-4 inline-flex w-full items-center justify-center gap-2 bg-white px-4 py-2 text-sm font-medium text-zinc-950 transition hover:bg-zinc-200"
               >
                 <Download className="size-4" />
                 Descargar y abrir

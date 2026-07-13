@@ -80,7 +80,7 @@ function Windows() {
                             </p>
                         </div>
 
-                        <div className="rounded-xl border border-zinc-800 bg-zinc-900/80 px-4 py-3 text-sm text-zinc-300">
+                        <div className="border border-zinc-800 bg-zinc-900/80 px-4 py-3 text-sm text-zinc-300">
                             <div className="flex items-center gap-2 text-amber-300">
                                 <TriangleAlert className="size-4" />
                                 No olvides DESACTIVAR tu antivirus antes de ejecutar el script, ya que podría bloquear la activación.
@@ -88,17 +88,17 @@ function Windows() {
                         </div>
                     </div>
 
-                    <div className="w-full max-w-xl overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-950/70 p-3">
+                    <div className="w-full max-w-xl overflow-hidden border border-zinc-800 bg-zinc-950/70 p-3">
                         <img
                             src={windows_no_activated}
                             alt="Vista previa de Windows PowerShell"
-                            className="h-full w-full rounded-xl object-cover"
+                            className="h-full w-full object-cover"
                         />
                     </div>
                 </div>
             </section>
 
-            <div className="rounded-2xl border border-zinc-800 bg-zinc-950/70 p-4">
+            <div className="border border-zinc-800 bg-zinc-950/70 p-4">
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                     <div>
                         <p className="text-sm font-medium text-white">Instalación auto</p>
@@ -109,19 +109,19 @@ function Windows() {
                         type="button"
                         onClick={handleExecuteMassgrave}
                         disabled={installingAuto}
-                        className="inline-flex cursor-pointer items-center justify-center rounded-lg bg-white px-4 py-2 text-sm font-semibold text-zinc-950 transition hover:bg-zinc-200 disabled:cursor-not-allowed disabled:opacity-50"
+                        className="inline-flex cursor-pointer items-center justify-center bg-white px-4 py-2 text-sm font-semibold text-zinc-950 transition hover:bg-zinc-200 disabled:cursor-not-allowed disabled:opacity-50"
                     >
                         {installingAuto ? "Abriendo..." : "Ejecutar Massgrave"}
                     </button>
                 </div>
 
                 {autoInstallStatus ? (
-                    <div className="mt-3 rounded-lg border border-zinc-800 bg-zinc-900 px-3 py-2 text-sm text-zinc-300">
+                    <div className="mt-3 border border-zinc-800 bg-zinc-900 px-3 py-2 text-sm text-zinc-300">
                         {autoInstallStatus}
                     </div>
                 ) : null}
 
-                <div className="mt-4 rounded-lg border border-zinc-800 bg-zinc-900 px-3 py-2 font-mono text-xs text-zinc-300">
+                <div className="mt-4 border border-zinc-800 bg-zinc-900 px-3 py-2 font-mono text-xs text-zinc-300">
                     {chromeWingetCommand}
                 </div>
             </div>
