@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import favicon from "@/assets/favicon.svg";
-import { HomeIcon, LaptopMinimal, KeyRoundIcon, FileTextIcon } from "lucide-react";
+import { HomeIcon, LaptopMinimal, KeyRoundIcon, FileTextIcon, WrenchIcon } from "lucide-react";
 
 function Sidebar() {
   const menu = [
@@ -24,6 +24,11 @@ function Sidebar() {
       path: "/office",
       icon: FileTextIcon,
     },
+    {
+      title: "Herramientas",
+      path: "/tools",
+      icon: WrenchIcon,
+    }
     
 
   ];
@@ -42,7 +47,7 @@ function Sidebar() {
               key={item.path}
               to={item.path}
               className={({ isActive }) =>
-                `relative flex items-center gap-4 rounded-lg px-3 py-2 transition-all ${isActive
+                `relative flex items-center gap-4 px-3 py-2 transition-all ${isActive
                   ? "bg-zinc-800 text-white border-l-4 border-zinc-400"
                   : "text-zinc-400 hover:bg-zinc-800 hover:text-white"
                 }`
@@ -61,7 +66,7 @@ function Sidebar() {
           href="https://buymeacoffee.com/zentoo"
           target="_blank"
           rel="noreferrer"
-          className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-xl border border-zinc-700 bg-zinc-800 px-4 py-3 text-sm font-semibold text-white transition hover:border-zinc-500 hover:bg-zinc-700"
+          className="mt-3 inline-flex w-full items-center justify-center gap-2 border border-zinc-700 bg-zinc-800 px-4 py-3 text-sm font-semibold text-white transition hover:border-zinc-500 hover:bg-zinc-700"
         >
           <span aria-hidden="true">☕</span>
           Buy me a coffee
