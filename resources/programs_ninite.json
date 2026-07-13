@@ -1,354 +1,447 @@
 [
 	{
 		"name": "brave",
-		"id": "brave"
+		"id": "brave",
+		"icon": "https://ninite.com/static/app_icons2/PLD56XG5YU5IK76KGOZWM3DTB4.png"
 	},
 	{
 		"name": "chrome",
-		"id": "chrome"
+		"id": "chrome",
+		"icon": "https://ninite.com/static/app_icons2/R423MXEYO4NJRC5YDPOEU362A4.png"
 	},
 	{
 		"name": "edge",
-		"id": "edge"
+		"id": "edge",
+		"icon": "https://ninite.com/static/app_icons2/DYEG7BMSZSDD7QCOZ7FZ7ZN27Y.png"
 	},
 	{
 		"name": "firefox",
-		"id": "firefox"
+		"id": "firefox",
+		"icon": "https://ninite.com/static/app_icons2/GXFFNGKNKZZTPF6U4IOSWAJDVU.png"
 	},
 	{
 		"name": "opera",
-		"id": "operaChromium"
+		"id": "operaChromium",
+		"icon": "https://ninite.com/static/app_icons2/EZ36SHVKOHLPDFAM4IC63DFOKU.png"
 	},
 	{
 		"name": "vivaldi",
-		"id": "vivaldi"
+		"id": "vivaldi",
+		"icon": "https://ninite.com/static/app_icons2/M7DYXA5NCVI2GUYL376NCVNZTQ.png"
 	},
 	{
 		"name": "epic games",
-		"id": "epic"
+		"id": "epic",
+		"icon": "https://ninite.com/static/app_icons2/RM2AV2SJTDLPSULKDVRTPVOHNY.png"
 	},
 	{
 		"name": "evernote",
-		"id": "evernote"
+		"id": "evernote",
+		"icon": "https://ninite.com/static/app_icons2/KK46R2C2HWCSYSQPPVS22ECW4M.png"
 	},
 	{
 		"name": "everything",
-		"id": "everything"
+		"id": "everything",
+		"icon": "https://ninite.com/static/app_icons2/NK4533UONX6G5TWA6ZTKYR6KTE.png"
 	},
 	{
 		"name": "googleearth",
-		"id": "googleearth"
+		"id": "googleearth",
+		"icon": "https://ninite.com/static/app_icons2/OKWWFAZBLZDQYFIDI2NISGCKFQ.png"
 	},
 	{
 		"name": "keepass2",
-		"id": "keepass2"
+		"id": "keepass2",
+		"icon": "https://ninite.com/static/app_icons2/UKR52BAL66I74BYAYBPU5CB5LQ.png"
 	},
 	{
 		"name": "nvda",
-		"id": "nvda"
+		"id": "nvda",
+		"icon": "https://ninite.com/static/app_icons2/HTIC43MRKMTBEQ3YMFPSXUC4GY.png"
 	},
 	{
 		"name": "steam",
-		"id": "steam"
+		"id": "steam",
+		"icon": "https://ninite.com/static/app_icons/Steam-366e162ab72bf4750858a9a62e4de040.png"
+	},
+	{
+		"name": "qbittorrent",
+		"id": "qbittorrent",
+		"icon": "https://ninite.com/static/app_icons2/DUQO4JC2XJTOCH3IJ6NPM7X7WU.png"
 	},
 	{
 		"name": "discord",
-		"id": "discord"
+		"id": "discord",
+		"icon":"https://ninite.com/static/app_icons2/5BU6KXYGWSLK4XSZLZIF5MQKUQ.png"
 	},
 	{
 		"name": "pidgin",
-		"id": "pidgin"
+		"id": "pidgin",
+		"icon": "https://ninite.com/static/app_icons2/VD4DSB2SJAQW5M5PN47Y5FEGX4.png"
 	},
 	{
 		"name": "microsoft teams",
-		"id": "teams"
+		"id": "teams",
+		"icon": "https://ninite.com/static/app_icons2/C4XO3QINCXSX5VV7HGXAJCEV6E.png"
 	},
 	{
 		"name": "thunderbird",
-		"id": "thunderbird"
+		"id": "thunderbird",
+		"icon": "https://ninite.com/static/app_icons2/JB3XAGLXGDN4W7CIEZQUDR3K2Q.png"
 	},
 	{
 		"name": "trillian",
-		"id": "trillian"
+		"id": "trillian",
+		"icon": "https://ninite.com/static/app_icons2/FU5PZX6ER7CCY7JJDBZ4YPEHRM.png"
 	},
 	{
 		"name": "zoom",
-		"id": "zoom"
+		"id": "zoom",
+		"icon": "https://ninite.com/static/app_icons2/PJTYHUUK2NBMDWBSTCHT3ZHCEA.png"
 	},
 	{
 		"name": "dropbox",
-		"id": "dropbox"
+		"id": "dropbox",
+		"icon": "https://ninite.com/static/app_icons2/K4S33DWJMHIJLGM4ZP6LNH2EV4.png"
 	},
 	{
 		"name": "google drive",
-		"id": "googledrivefordesktop"
+		"id": "googledrivefordesktop",
+		"icon": "https://ninite.com/static/app_icons2/M2YU6HDJA4HEIQZDWKCE4ZIQYY.png"
 	},
 	{
 		"name": "ondrive",
-		"id": "onedrive"
+		"id": "onedrive",
+		"icon": "https://ninite.com/static/app_icons2/R7YFCGQNSZONF5VJ6I2U3RXCM4.png"
 	},
 	{
 		"name": "sugarsync",
-		"id": "sugarsync"
+		"id": "sugarsync",
+		"icon": "https://ninite.com/static/app_icons/sugarsync-e54f075bb9bca7c2329f4b7ad283d724.png"
 	},
 	{
 		"name": "7zip",
-		"id": "7zip"
+		"id": "7zip",
+		"icon": "https://ninite.com/static/app_icons2/J2GZ5DNECZISS4HIZIEVE74BDQ.png"
 	},
 	{
 		"name": "peazip",
-		"id": "peazip"
+		"id": "peazip",
+		"icon": "https://ninite.com/static/app_icons/peazip-e60cdf74fe4e4fa74f0ee8bb89712225.png"
 	},
 	{
 		"name": "winrar",
-		"id": "winrar"
+		"id": "winrar",
+		"icon": "https://ninite.com/static/app_icons2/NRI2CC4JKEOQVLNYMCPEFOQK7M.png"
 	},
 	{
 		"name": "aimp",
-		"id": "aimp"
+		"id": "aimp",
+		"icon": "https://ninite.com/static/app_icons2/64OB5M3CI6CONJWJE47QCLWV24.png"
 	},
 	{
 		"name": "audacity",
-		"id": "audacity"
+		"id": "audacity",
+		"icon": "https://ninite.com/static/app_icons2/ZV53RR2KSRN2XUQDGKJVK6BH2Y.png"
 	},
 	{
 		"name": "cccp",
-		"id": "cccp"
+		"id": "cccp",
+		"icon": "https://ninite.com/static/app_icons/cccp-a3a90c36f622b281bcc97a5f408c6855.png"
 	},
 	{
 		"name": "foobar",
-		"id": "foobar"
+		"id": "foobar",
+		"icon": "https://ninite.com/static/app_icons2/NUKVHYMQNRENE32GFVTLLQMUPA.png"
 	},
 	{
 		"name": "gom",
-		"id": "gom"
+		"id": "gom",
+		"icon": "https://ninite.com/static/app_icons/GOM-f9c20cdbc01b486da70a62f768679f62.png"
 	},
 	{
 		"name": "handbrake",
-		"id": "handbrake"
+		"id": "handbrake",
+		"icon": "https://ninite.com/static/app_icons2/NMYRLL2HPGSWPFMVTNEAPHVE7U.png"
 	},
 	{
 		"name": "itunes",
-		"id": "itunes"
+		"id": "itunes",
+		"icon": "https://ninite.com/static/app_icons2/XVHE53C2TRG4WZZWHTIG26ZQOM.png"
 	},
 	{
 		"name": "klitecodecs",
-		"id": "klitecodecs"
+		"id": "klitecodecs",
+		"icon": "https://ninite.com/static/app_icons2/P3TLJ7YGY4TKZCJRXK2GEMC5Z4.png"
 	},
 	{
 		"name": "mediamonkey",
-		"id": "mediamonkey"
+		"id": "mediamonkey",
+		"icon": "https://ninite.com/static/app_icons2/CUC2UEP5TIYIAXXL23YPQRG5SA.png"
 	},
 	{
 		"name": "musicbee",
-		"id": "musicbee"
+		"id": "musicbee",
+		"icon": "https://ninite.com/static/app_icons2/3VTNW46X4R5XS5QHHEVRQKQAEY.png"
 	},
 	{
 		"name": "spotify",
-		"id": "spotify"
+		"id": "spotify",
+		"icon": "https://ninite.com/static/app_icons2/X4XEFHP4PS5JTTFLD5GZ736MSE.png"
 	},
 	{
 		"name": "vlc",
-		"id": "vlc"
+		"id": "vlc",
+		"icon": "https://ninite.com/static/app_icons2/AARRKXIDTYQEB43EI4SESMU6XU.png"
 	},
 	{
 		"name": "winamp",
-		"id": "winamp"
+		"id": "winamp",
+		"icon": "https://ninite.com/static/app_icons/winamp2-cda3f4d6e7939016035bd4bff51c04f8.png"
 	},
 	{
 		"name": "blender",
-		"id": "blender"
+		"id": "blender",
+		"icon": "https://ninite.com/static/app_icons2/CREZUGUDCUDHBWHSJYTZLKUS2M.png"
 	},
 	{
 		"name": "faststone",
-		"id": "faststone"
+		"id": "faststone",
+		"icon": "https://ninite.com/static/app_icons2/L7R6BPJMEA2I5T2BHFY5PQMTYE.png"
 	},
 	{
 		"name": "gimp",
-		"id": "gimp"
+		"id": "gimp",
+		"icon": "https://ninite.com/static/app_icons2/RLDUTCFVUHK6WCBU4TJXR5DXBE.png"
 	},
 	{
 		"name": "greenshot",
-		"id": "greenshot"
+		"id": "greenshot",
+		"icon": "https://ninite.com/static/app_icons2/K45OLYWPKVHDIFQM3RIUYYWHZI.png"
 	},
 	{
 		"name": "inkscape",
-		"id": "inkscape"
+		"id": "inkscape",
+		"icon": "https://ninite.com/static/app_icons2/LIPQ37QBIA3OA34OAZGSRAKNIE.png"
 	},
 	{
 		"name": "irfanview",
-		"id": "irfanview"
+		"id": "irfanview",
+		"icon": "https://ninite.com/static/app_icons2/ORG2PE5KGHRNSUGJIRDPRNVLDI.png"
 	},
 	{
 		"name": "krita",
-		"id": "krita"
+		"id": "krita",
+		"icon": "https://ninite.com/static/app_icons2/I34XNAOB7RUG6CFUNMATLL6GW4.png"
 	},
 	{
 		"name": "paint.net",
-		"id": "paint.net"
+		"id": "paint.net",
+		"icon": "https://ninite.com/static/app_icons2/X4EQ57DBOI3YGMP67VLIZA2OFU.png"
 	},
 	{
 		"name": "sharex",
-		"id": "sharex"
+		"id": "sharex",
+		"icon": "https://ninite.com/static/app_icons2/KSS6YR3VGGJK77G3JOBM6GD3LQ.png"
 	},
 	{
 		"name": "xnview",
-		"id": "xnview"
+		"id": "xnview",
+		"icon": "https://ninite.com/static/app_icons2/PTAKCMZXB7ZU4ITLKH2O3BVOQI.png"
 	},
 	{
 		"name": "anydesk",
-		"id": "anydesk"
+		"id": "anydesk",
+		"icon": "https://ninite.com/static/app_icons2/5Z7TFQBFUQREUBBJFOC3YBPVWY.png"
 	},
 	{
 		"name": "ccleaner",
-		"id": "ccleaner"
+		"id": "ccleaner",
+		"icon": "https://ninite.com/static/app_icons2/WZXTBXQ3ZI5FU4J2RAGJJN22XA.png"
 	},
 	{
 		"name": "cdburnerxp",
-		"id": "cdburnerxp"
+		"id": "cdburnerxp",
+		"icon": "https://ninite.com/static/app_icons2/PUD67ZCNWBDZ6UDQZXA3AHKNTQ.png"
 	},
 	{
 		"name": "glary",
-		"id": "glary"
+		"id": "glary",
+		"icon": "https://ninite.com/static/app_icons2/IXGPFTBK3EBFWTF43W4DAYDPFA.png"
 	},
 	{
 		"name": "imgburn",
-		"id": "imgburn"
+		"id": "imgburn",
+		"icon": "https://ninite.com/static/app_icons/imgburn6-05979ca4a326206e4d48fcdc1b33b2f2.png"
 	},
 	{
 		"name": "infrarecorder",
-		"id": "infrarecorder"
+		"id": "infrarecorder",
+		"icon": "https://ninite.com/static/app_icons/InfraRecorder-7368df145ca51c7dfee29714c6b5439f.png"
 	},
 	{
 		"name": "launchy",
-		"id": "launchy"
+		"id": "launchy",
+		"icon": "https://ninite.com/static/app_icons2/VF5JIQV5Z2D3BH4625JDPOKUJQ.png"
 	},
 	{
 		"name": "openshell",
-		"id": "openshell"
+		"id": "openshell",
+		"icon": "https://ninite.com/static/app_icons2/2ZZ3CQAIJJYDSV6JSZ7PDNU3J4.png"
 	},
 	{
 		"name": "realvncserver",
-		"id": "realvncserver"
+		"id": "realvncserver",
+		"icon": "https://ninite.com/static/app_icons2/BA6TGTQONKPCEPJPAWTORVKNBA.png"
 	},
 	{
 		"name": "realvncviewer",
-		"id": "realvncviewer"
+		"id": "realvncviewer",
+		"icon": "https://ninite.com/static/app_icons2/2CD6UJKHHDALPB2R4RORS5OZGM.png"
 	},
 	{
 		"name": "revo uninstaller",
-		"id": "revo"
+		"id": "revo",
+		"icon": "https://ninite.com/static/app_icons2/RHYHBER4C6NCUUDLAMBNVUZSEM.png"
 	},
 	{
 		"name": "teamviewer15",
-		"id": "teamviewer15"
+		"id": "teamviewer15",
+		"icon": "https://ninite.com/static/app_icons2/NQ7A6XLSO6MEWKKVSYP5PVAOWM.png"
 	},
 	{
 		"name": "teracopy",
-		"id": "teracopy"
+		"id": "teracopy",
+		"icon": "https://ninite.com/static/app_icons2/73NFQ6DX5AVLMEYDL2GVY6BNZE.png"
 	},
 	{
 		"name": "tightvnc",
-		"id": "tightvnc"
+		"id": "tightvnc",
+		"icon": "https://ninite.com/static/app_icons2/S4MVE6YPSM5KJLRWD6RYZ42X3I.png"
 	},
 	{
 		"name": "windirstat",
-		"id": "windirstat"
+		"id": "windirstat",
+		"icon": "https://ninite.com/static/app_icons2/3F75KHXWQRPHBBXP3ULW2KXPP4.png"
 	},
 	{
 		"name": "wiztree",
-		"id": "wiztree"
+		"id": "wiztree",
+		"icon": "https://ninite.com/static/app_icons2/JMLCA4FNPMCLZVC6X5M5DQRZ6M.png"
 	},
 	{
 		"name": "cutepdf",
-		"id": "cutepdf"
+		"id": "cutepdf",
+		"icon": "https://ninite.com/static/app_icons2/S7CH5FAYVNHUVKITKNAGUQUXQU.png"
 	},
 	{
 		"name": "foxitpdf",
-		"id": "foxit"
+		"id": "foxit",
+		"icon": "https://ninite.com/static/app_icons2/VWKMB53R3PPNV2VZOJTD54VI2I.png"
 	},
 	{
 		"name": "libreoffice",
-		"id": "libreoffice"
+		"id": "libreoffice",
+		"icon": "https://ninite.com/static/app_icons2/WMDH233EOQ2BHQXVBJ6BJPGMV4.png"
 	},
 	{
 		"name": "openoffice",
-		"id": "openoffice"
+		"id": "openoffice",
+		"icon": "https://ninite.com/static/app_icons2/UTOQV2LVGD5JJTB4H4IIIJGOB4.png"
 	},
 	{
 		"name": "sumatrapdf",
-		"id": "sumatrapdf"
+		"id": "sumatrapdf",
+		"icon": "https://ninite.com/static/app_icons2/NFVWWLOOUOQ666LOICENU3ZCEA.png"
 	},
 	{
 		"name": "avast",
-		"id": "avast"
+		"id": "avast",
+		"icon": "https://ninite.com/static/app_icons2/XEJG4KBIORJAJQNFVDACDWJVO4.png"
 	},
 	{
 		"name": "avg",
-		"id": "avg"
+		"id": "avg",
+		"icon": "https://ninite.com/static/app_icons2/MSMIOLWDKQ4EDFKU72BGYCRQOM.png"
 	},
 	{
 		"name": "avira",
-		"id": "avira"
+		"id": "avira",
+		"icon": "https://ninite.com/static/app_icons/avira-e395b067008874c133037b063c2c7378.png"
 	},
 	{
 		"name": "malwarebytes",
-		"id": "malwarebytes"
+		"id": "malwarebytes",
+		"icon": "https://ninite.com/static/app_icons2/YNTAGZLB2E5CBSUKR7O5LKME74.png"
 	},
 	{
 		"name": "spybot2",
-		"id": "spybot2"
+		"id": "spybot2",
+		"icon": "https://ninite.com/static/app_icons2/OARFNOH5Y3JW7DUSPWQJB6NRJA.png"
 	},
 	{
 		"name": "cursor",
-		"id": "cursor"
+		"id": "cursor",
+		"icon": "https://ninite.com/static/app_icons2/XDFEAXAVWSZTENNVHOIJWL2GHU.png"
 	},
 	{
 		"name": "eclipse",
-		"id": "eclipse"
+		"id": "eclipse",
+		"icon": "https://ninite.com/static/app_icons2/OH5JK4T37ZZVVBDHYUVCMPPEAY.png"
 	},
 	{
 		"name": "filezilla",
-		"id": "filezilla"
+		"id": "filezilla",
+		"icon": "https://ninite.com/static/app_icons2/UCG2YDEICGHL7W5S353DW3ZGUQ.png"
 	},
 	{
 		"name": "git",
-		"id": "git"
+		"id": "git",
+		"icon": "https://ninite.com/static/app_icons2/32RPMCUSHFCBS7ROARZOFNTDPI.png"
 	},
 	{
 		"name": "notepad++",
-		"id": "notepadplusplus"
+		"id": "notepadplusplus",
+		"icon": "https://ninite.com/static/app_icons2/GKN2YUIWOVLL7R4EO2EPFDDS74.png"
 	},
 	{
 		"name": "putty",
-		"id": "putty"
+		"id": "putty",
+		"icon": "https://ninite.com/static/app_icons2/3FORVNEMBNGVEKIB6BLSZ77RII.png"
 	},
 	{
 		"name": "python",
-		"id": "python"
+		"id": "python",
+		"icon": "https://ninite.com/static/app_icons/Python-317e96653a84de2b9d25d4f10d9e7649.png"
 	},
 	{
 		"name": "python3",
-		"id": "python3"
+		"id": "python3",
+		"icon": "https://ninite.com/static/app_icons/Python-317e96653a84de2b9d25d4f10d9e7649.png"
 	},
 	{
 		"name": "pythona3",
-		"id": "pythona3"
+		"id": "pythona3",
+		"icon": "https://ninite.com/static/app_icons/Python-317e96653a84de2b9d25d4f10d9e7649.png"
 	},
 	{
 		"name": "pythonx3",
-		"id": "pythonx3"
+		"id": "pythonx3",
+		"icon": "https://ninite.com/static/app_icons/Python-317e96653a84de2b9d25d4f10d9e7649.png"
 	},
 	{
 		"name": "vscode",
-		"id": "vscode"
+		"id": "vscode",
+		"icon": "https://ninite.com/static/app_icons2/VU4TI533VCF2OQAFM67LLLV7YI.png"
 	},
 	{
 		"name": "winmerge",
-		"id": "winmerge"
+		"id": "winmerge",
+		"icon": "https://ninite.com/static/app_icons2/JMT7MGL3SDJEKFUBNUSFBFAGHM.png"
 	},
 	{
 		"name": "winscp",
-		"id": "winscp"
+		"id": "winscp",
+		"icon": "https://ninite.com/static/app_icons2/ZRRDNABCRBQB5M62WXHFCOSG4U.png"
 	}
 ]
