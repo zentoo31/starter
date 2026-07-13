@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import favicon from "@/assets/favicon.svg";
-import { HomeIcon, LaptopMinimal, KeyRoundIcon, FileTextIcon, WrenchIcon } from "lucide-react";
+import { HomeIcon, LaptopMinimal, KeyRoundIcon, FileTextIcon, WrenchIcon, ImageIcon } from "lucide-react";
 
 function Sidebar() {
   const menu = [
@@ -28,6 +28,11 @@ function Sidebar() {
       title: "Herramientas",
       path: "/tools",
       icon: WrenchIcon,
+    },
+    {
+      title: "Fondos",
+      path: "/background",
+      icon: ImageIcon
     }
     
 
