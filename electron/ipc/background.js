@@ -38,29 +38,27 @@ ipcMain.handle("background:setBg", async (event, url) => {
     await downloadFile(url, destination);
 
     // Cambiar el fondo de pantalla
-    const script = `
-                Add-Type @"
-                using System.Runtime.InteropServices;
-                public class Wallpaper {
-                    [DllImport("user32.dll", EntryPoint="SystemParametersInfoW", CharSet=CharSet.Unicode)]
-                    public static extern bool SystemParametersInfo(
-                        int uAction,
-                        int uParam,
-                        string lpvParam,
-                        int fuWinIni
-                    );
-                }
-                "@
+const script = `Add-Type @"
+using System.Runtime.InteropServices;
+public class Wallpaper {
+    [DllImport("user32.dll", EntryPoint="SystemParametersInfoW", CharSet=CharSet.Unicode)]
+    public static extern bool SystemParametersInfo(
+        int uAction,
+        int uParam,
+        string lpvParam,
+        int fuWinIni
+    );
+}
+"@
 
-                $result = [Wallpaper]::SystemParametersInfo(
-                    20,
-                    0,
-                    "${destination}",
-                    3
-                )
+$result = [Wallpaper]::SystemParametersInfo(
+    20,
+    0,
+    "${destination}",
+    3
+)
 
-                Write-Host $result
-                `;
+Write-Host $result`;
     await new Promise((resolve, reject) => {
         execFile(
             "powershell.exe",
