@@ -11,6 +11,8 @@ contextBridge.exposeInMainWorld("electronAPI", {
   installProgram: (program) => ipcRenderer.invoke("program:install", program),
   uninstallProgram: (program) => ipcRenderer.invoke("program:uninstall", program),
   executeMassgrave: () => ipcRenderer.invoke("windows:execute-massgrave"),
+  showBgs: (text) => ipcRenderer.invoke("background:showBgs", text),
+  setBg: (text) => ipcRenderer.invoke("background:setBg", text),
   onInstallLog: (callback) => {
     const listener = (_event, payload) => callback(payload);
 

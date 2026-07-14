@@ -5,6 +5,8 @@ import Layout from "./components/Layout";
 import Develop from "./pages/Develop";
 import Windows from "./pages/Windows";
 import Office from "./pages/Office";
+import Tools from "./pages/Tools";
+import Background from "./pages/Background";
 function App() {
   return (
     <Layout>
@@ -14,6 +16,8 @@ function App() {
         <Route path="/develop" element={<Develop />} />
         <Route path="/windows" element={<Windows />} />
         <Route path="/office" element={<Office />} />
+        <Route path="/tools" element={<Tools />} />
+        <Route path="/background" element={<Background/>} />
       </Routes>
     </Layout>
   );

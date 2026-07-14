@@ -1,15 +1,50 @@
-{
-  "id": "Google.Chrome",
-  "name": "Google Chrome",
-  "category": "Browser",
-  "methods": {
-    "winget": "Google.Chrome",
-    "direct": {
-      "url": "https://dl.google.com/chrome/install/latest/chrome_installer.exe",
-      "silentArgs": [
-        "/silent",
-        "/install"
-      ]
-    }
+[
+  {
+    "id": "Google.Chrome",
+    "name": "Google Chrome",
+    "category": "Browser",
+    "url": "https://dl.google.com/chrome/install/latest/chrome_installer.exe"
+  },
+  {
+    "id": "OBS.Studio",
+    "name": "OBS Studio",
+    "category": "Streaming",
+    "url": "https://cdn-fastly.obsproject.com/downloads/OBS-Studio-32.1.2-Windows-x64-Installer.exe"
+  },
+  {
+    "id": "LightShot",
+    "name": "LightShot",
+    "category": "Screenshot",
+    "url": "https://app.prntscr.com/build/setup-lightshot.exe"
+  },
+  {
+    "id": "Notepad3",
+    "name": "Notepad3",
+    "category": "Text Editor",
+    "url": "https://rizonesoft.com/?gdm_process_download=1&download_id=18312"
+  },
+  {
+    "id": "ProtonVPN",
+    "name": "ProtonVPN",
+    "category": "VPN",
+    "url": "https://protonvpn.com/download/ProtonVPN_v4.4.1_x64.exe"
+  },
+  {
+    "id": "Node JS",
+    "name": "Node JS v24.18.0",
+    "category": "Development",
+    "url": "https://nodejs.org/dist/v24.18.0/node-v24.18.0-x64.msi"
+  },
+  {
+    "id": "MediBang.Paint",
+    "name": "MediBang Paint",
+    "category": "Drawing",
+    "url": "https://medibangpaint.com/static/installer/MediBangPaintPro/MediBangPaintProSetup-29.1-64bit.exe"
+  },
+  {
+    "id": "Clip Studio Paint",
+    "name": "Clip Studio Paint",
+    "category": "Drawing",
+    "url": "https://www.clipstudio.net/gd?id=csp-latest-install-win"
   }
-}
+]

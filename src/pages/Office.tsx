@@ -48,7 +48,7 @@ function Office() {
               </p>
             </div>
 
-            <div className="rounded-xl border border-zinc-800 bg-zinc-900/80 px-4 py-3 text-sm text-zinc-300">
+            <div className="border border-zinc-800 bg-zinc-900/80 px-4 py-3 text-sm text-zinc-300">
               <div className="flex items-center gap-2 text-amber-300">
                 <TriangleAlert className="size-4" />
                 No olvides DESACTIVAR tu antivirus antes de ejecutar el script, ya que podría bloquear la activación.
@@ -56,11 +56,11 @@ function Office() {
             </div>
           </div>
 
-          <div className="w-full max-w-xl overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-950/70 p-3">
+          <div className="w-full max-w-xl overflow-hidden border border-zinc-800 bg-zinc-950/70 p-3">
             <img
               src={office_logo}
               alt="Vista previa de Office"
-              className="h-full w-full rounded-xl object-cover"
+              className="h-full w-full object-cover"
             />
           </div>
         </div>

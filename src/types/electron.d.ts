@@ -11,6 +11,8 @@ declare global {
       installProgram: (program: any) => Promise<{ success: boolean; code: number | null; stdout: string; stderr: string }>;
       uninstallProgram: (program: any) => Promise<{ success: boolean; code: number | null; stdout: string; stderr: string }>;
       executeMassgrave: () => Promise<{ success: boolean; error: string | null }>;
+      showBgs: (text:string) => Promise<any>;
+      setBg: (text: string) => Promise<any>;
       onInstallLog: (callback: (payload: any) => void) => () => void;
     };
   }
