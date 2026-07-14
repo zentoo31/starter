@@ -254,3 +254,6 @@ ipcMain.handle("program:uninstall", async (event, program) => {
     stderr: "",
   };
 });
+
+
+export { downloadFile };
