@@ -25,14 +25,14 @@ function Sidebar() {
       icon: FileTextIcon,
     },
     {
-      title: "Herramientas",
-      path: "/tools",
-      icon: WrenchIcon,
-    },
-    {
       title: "Fondos",
       path: "/background",
       icon: ImageIcon
+    },
+    {
+      title: "Herramientas",
+      path: "/tools",
+      icon: WrenchIcon,
     }
     
 

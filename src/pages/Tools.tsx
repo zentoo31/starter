@@ -1,7 +1,7 @@
 
 function Tools() {
   return (
-    <div>Tools</div>
+    <div>Coming soon...</div>
   )
 }
 
