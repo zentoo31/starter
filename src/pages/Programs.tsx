@@ -3,8 +3,8 @@ import niniteProgramsData from "@/data/programs_ninite.json";
 import directProgramsData from "@/data/programs.json";
 import { BadgeInfo, Download, Search } from "lucide-react";
 import type { NiniteProgram, NiniteProgramSource, Program, ProgramSource } from "@/types/programs";
-const defaultProgramIcon = "/favicon.svg";
 
+const defaultProgramIcon = "./favicon.svg";
 const niniteProgramSources = (Array.isArray(niniteProgramsData) ? niniteProgramsData : [niniteProgramsData]) as NiniteProgramSource[];
 const directProgramSources = (Array.isArray(directProgramsData) ? directProgramsData : [directProgramsData]) as ProgramSource[];
 
